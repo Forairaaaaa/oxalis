@@ -1,10 +1,10 @@
-import Link from "next/link"
+import Link from "next/link";
+import { Button } from "@nextui-org/button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <button>你好</button>
-      <Link href={"/about"}>啊?</Link>
-    </main>
-  )
+    <div className="flex flex-row justify-center p-12">
+      <Button size="sm">??</Button>
+    </div>
+  );
 }
