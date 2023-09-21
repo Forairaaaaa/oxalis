@@ -12,7 +12,18 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      }
     },
     "bundle": {
       "active": true,
@@ -55,11 +66,13 @@
     },
     "windows": [
       {
+        "transparent": false,
+        "decorations": false,
         "fullscreen": false,
         "height": 600,
         "resizable": true,
         "title": "Oxalis",
-        "width": 900
+        "width": 1000
       }
     ]
   }

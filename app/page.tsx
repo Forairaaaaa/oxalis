@@ -1,10 +1,34 @@
-import Link from "next/link";
+import { Button } from "@nextui-org/button";
 import HomePageNavBar from "./components/nav-bar";
 
 export default function Home() {
   return (
     <div>
       <HomePageNavBar></HomePageNavBar>
+
+      {/* <div data-tauri-drag-region className="titlebar">
+
+        <Button>?????</Button>
+        <Button>?????</Button>
+        <Button>?????</Button>
+
+        <div className="titlebar-button" id="titlebar-minimize">
+          <img
+            src="https://api.iconify.design/mdi:window-minimize.svg"
+            alt="minimize"
+          />
+        </div>
+        <div className="titlebar-button" id="titlebar-maximize">
+          <img
+            src="https://api.iconify.design/mdi:window-maximize.svg"
+            alt="maximize"
+          />
+        </div>
+        <div className="titlebar-button" id="titlebar-close">
+          <img src="https://api.iconify.design/mdi:close.svg" alt="close" />
+        </div>
+      </div> */}
+
       <div className="m-5 font-light text-lg">
         Many programming languages don’t require you to think about the stack
         and the heap very often. But in a systems programming language like
