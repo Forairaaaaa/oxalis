@@ -2,11 +2,23 @@
 // https://tauri.app/v1/guides/features/window-customization
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@nextui-org/button";
 import { appWindow } from "@tauri-apps/api/window";
+import Image from "next/image";
 
 export default function WindowControls() {
+  const [isMaximized, setIsMaximized] = useState(false);
+
+  // Toggle icon
+  appWindow.onResized(async (size) => {
+    let shit = await appWindow.isMaximized();
+
+    if (shit != isMaximized) {
+      setIsMaximized(shit);
+    }
+  });
+
   return (
     <div className="flex flex-row gap-2 mx-2 items-center">
       <Button
@@ -19,11 +31,12 @@ export default function WindowControls() {
           appWindow.minimize();
         }}
       >
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
-        />
-        <span className="material-symbols-outlined">remove</span>
+        <Image
+          src="/window-control-icons/remove_FILL0_wght300_GRAD-25_opsz20.svg"
+          alt="icon minimize window"
+          width={20}
+          height={20}
+        ></Image>
       </Button>
 
       <Button
@@ -36,11 +49,16 @@ export default function WindowControls() {
           appWindow.toggleMaximize();
         }}
       >
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0"
-        />
-        <span className="material-symbols-outlined">expand_content</span>
+        <Image
+          src={
+            isMaximized
+              ? "/window-control-icons/hide_FILL0_wght300_GRAD-25_opsz20.svg"
+              : "/window-control-icons/expand_content_FILL0_wght300_GRAD-25_opsz20.svg"
+          }
+          alt="icon toggle window maximize"
+          width={20}
+          height={20}
+        ></Image>
       </Button>
 
       <Button
@@ -53,11 +71,12 @@ export default function WindowControls() {
           appWindow.close();
         }}
       >
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,00,1,0"
-        />
-        <span className="material-symbols-outlined">close</span>
+        <Image
+          src="/window-control-icons/close_FILL0_wght300_GRAD-25_opsz20.svg"
+          alt="icon close window"
+          width={22}
+          height={22}
+        ></Image>
       </Button>
     </div>
   );
