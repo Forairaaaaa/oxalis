@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-} from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
 import { Switch } from "@nextui-org/switch";
-import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
 
 export default function HomePageNavBar() {
   return (

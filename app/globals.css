@@ -5,23 +5,24 @@
 /* 'fixed' in tailwind is undragable, don't know why */
 .titlebar {
   height: 3rem;
-  background: white;
   user-select: none;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  backdrop-filter: blur(4px);
 }
 
-.titlebar-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-}
-.titlebar-button:hover {
-  background: #5bbec3;
+.receiveWindow {
+  user-select: none;
+  resize: none;
+  border: none;
+  outline: none;
+  /* padding-top: 3rem; */
+  margin-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
