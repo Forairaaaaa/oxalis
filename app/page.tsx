@@ -7,8 +7,7 @@ export default function Home() {
     <div className="flex flex-col h-screen">
       <HomePageNavBar></HomePageNavBar>
 
-      <Card className="grow mt-12 max-h-44" radius="lg">
-        <div className="">
+      <div className="grow receiveWindow scrollbarLight font-mono">
           Many programming languages don’t require you to think about the stack
           and the heap very often. But in a systems programming language like
           Rust, whether a value is on the stack or the heap affects how the
@@ -178,7 +177,6 @@ export default function Home() {
           </span>
           data can help explain why it works the way it does.
         </div>
-      </Card>
     </div>
   );
 }

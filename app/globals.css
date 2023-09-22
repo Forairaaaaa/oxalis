@@ -13,16 +13,38 @@
   top: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(4px);
 }
 
 .receiveWindow {
-  user-select: none;
   resize: none;
   border: none;
   outline: none;
-  /* padding-top: 3rem; */
   margin-top: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  overflow-y: scroll;
+  scrollbar-width: 2px;
+}
+
+/* Custom scroll bar */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.scrollbarLight::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.scrollbarLight::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.scrollbarDark::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.scrollbarDark::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
