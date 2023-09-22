@@ -2,9 +2,9 @@ import React from "react";
 import { Button } from "@nextui-org/button";
 import { Switch } from "@nextui-org/switch";
 
-export default function HomePageNavBar() {
+export default function SerialControlPanel() {
   return (
-    <div data-tauri-drag-region className="titlebar">
+    <div className="flex flex-row align-middle mx-4">
       <Switch color="success"></Switch>
       <Button className="" size="sm" radius="lg" variant="light">
         COM23

@@ -2,29 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 'fixed' in tailwind is undragable, don't know why */
-.titlebar {
-  height: 3rem;
-  user-select: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.receiveWindow {
-  resize: none;
-  border: none;
-  outline: none;
-  margin-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  overflow-y: scroll;
-  scrollbar-width: 2px;
-}
 
 /* Custom scroll bar */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
